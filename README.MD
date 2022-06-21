@@ -47,50 +47,6 @@
 This operation does not require authentication
 </aside>
 
-## put__nft-entity
-
-> Code samples
-
-`PUT /nft-entity`
-
-> Body parameter
-
-```json
-{
-  "id": 0,
-  "entity_id": "string",
-  "entity_type": "string",
-  "token": "string",
-  "created_at": 0,
-  "updated_at": 0,
-  "deleted_at": 0
-}
-```
-
-<h3 id="put__nft-entity-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|body|body|[cnft.apiv1.NftEntityUpdateReq](#schemacnft.apiv1.nftentityupdatereq)|true|none|
-
-> Example responses
-
-> 200 Response
-
-```json
-{}
-```
-
-<h3 id="put__nft-entity-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[cnft.apiv1.NftEntityUpdateRes](#schemacnft.apiv1.nftentityupdateres)|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
 ## get__nft-entity_entity_{id}
 
 > Code samples
@@ -177,74 +133,6 @@ This operation does not require authentication
 This operation does not require authentication
 </aside>
 
-## delete__nft-entity_{id}
-
-> Code samples
-
-`DELETE /nft-entity/{id}`
-
-<h3 id="delete__nft-entity_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|Id|path|number(int)|true|none|
-
-> Example responses
-
-> 200 Response
-
-```json
-{}
-```
-
-<h3 id="delete__nft-entity_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[cnft.apiv1.NftEntityDeleteRes](#schemacnft.apiv1.nftentitydeleteres)|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## get__nft-entity_{id}
-
-> Code samples
-
-`GET /nft-entity/{id}`
-
-<h3 id="get__nft-entity_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|Id|path|number(int)|true|none|
-
-> Example responses
-
-> 200 Response
-
-```json
-{
-  "id": 0,
-  "entity_id": "string",
-  "entity_type": "string",
-  "token": "string",
-  "created_at": 0,
-  "updated_at": 0,
-  "deleted_at": 0
-}
-```
-
-<h3 id="get__nft-entity_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[cnft.apiv1.NftEntityGetByIdRes](#schemacnft.apiv1.nftentitygetbyidres)|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
 # Schemas
 
 <h2 id="tocS_cnft.apiv1.NftEntityAddReq">cnft.apiv1.NftEntityAddReq</h2>
@@ -275,54 +163,6 @@ This operation does not require authentication
 <a id="schema_cnft.apiv1.NftEntityAddRes"></a>
 <a id="tocScnft.apiv1.nftentityaddres"></a>
 <a id="tocscnft.apiv1.nftentityaddres"></a>
-
-```json
-{}
-
-```
-
-### Properties
-
-*None*
-
-<h2 id="tocS_cnft.apiv1.NftEntityUpdateReq">cnft.apiv1.NftEntityUpdateReq</h2>
-<!-- backwards compatibility -->
-<a id="schemacnft.apiv1.nftentityupdatereq"></a>
-<a id="schema_cnft.apiv1.NftEntityUpdateReq"></a>
-<a id="tocScnft.apiv1.nftentityupdatereq"></a>
-<a id="tocscnft.apiv1.nftentityupdatereq"></a>
-
-```json
-{
-  "id": 0,
-  "entity_id": "string",
-  "entity_type": "string",
-  "token": "string",
-  "created_at": 0,
-  "updated_at": 0,
-  "deleted_at": 0
-}
-
-```
-
-### Properties
-
-|Name|Type|Required|Restrictions|Description|
-|---|---|---|---|---|
-|id|number(int64)|false|none|主键|
-|entity_id|string(string)|false|none|实体id##|
-|entity_type|string(string)|false|none|实体类型，1:装备##|
-|token|string(string)|false|none|区块链token##|
-|created_at|number(int64)|false|none|创建时间##|
-|updated_at|number(int64)|false|none|创建时间##|
-|deleted_at|number(int64)|false|none|创建时间##|
-
-<h2 id="tocS_cnft.apiv1.NftEntityUpdateRes">cnft.apiv1.NftEntityUpdateRes</h2>
-<!-- backwards compatibility -->
-<a id="schemacnft.apiv1.nftentityupdateres"></a>
-<a id="schema_cnft.apiv1.NftEntityUpdateRes"></a>
-<a id="tocScnft.apiv1.nftentityupdateres"></a>
-<a id="tocscnft.apiv1.nftentityupdateres"></a>
 
 ```json
 {}
@@ -475,60 +315,5 @@ This operation does not require authentication
 |updated_at|number(int64)|false|none|创建时间##|
 |deleted_at|number(int64)|false|none|创建时间##|
 
-<h2 id="tocS_cnft.apiv1.NftEntityDeleteReq">cnft.apiv1.NftEntityDeleteReq</h2>
-<!-- backwards compatibility -->
-<a id="schemacnft.apiv1.nftentitydeletereq"></a>
-<a id="schema_cnft.apiv1.NftEntityDeleteReq"></a>
-<a id="tocScnft.apiv1.nftentitydeletereq"></a>
-<a id="tocscnft.apiv1.nftentitydeletereq"></a>
-
-```json
-{
-  "Id": 0
-}
-
-```
-
-### Properties
-
-|Name|Type|Required|Restrictions|Description|
-|---|---|---|---|---|
-|Id|number(int)|false|none|none|
-
-<h2 id="tocS_cnft.apiv1.NftEntityDeleteRes">cnft.apiv1.NftEntityDeleteRes</h2>
-<!-- backwards compatibility -->
-<a id="schemacnft.apiv1.nftentitydeleteres"></a>
-<a id="schema_cnft.apiv1.NftEntityDeleteRes"></a>
-<a id="tocScnft.apiv1.nftentitydeleteres"></a>
-<a id="tocscnft.apiv1.nftentitydeleteres"></a>
-
-```json
-{}
-
-```
-
-### Properties
-
-*None*
-
-<h2 id="tocS_cnft.apiv1.NftEntityGetByIdReq">cnft.apiv1.NftEntityGetByIdReq</h2>
-<!-- backwards compatibility -->
-<a id="schemacnft.apiv1.nftentitygetbyidreq"></a>
-<a id="schema_cnft.apiv1.NftEntityGetByIdReq"></a>
-<a id="tocScnft.apiv1.nftentitygetbyidreq"></a>
-<a id="tocscnft.apiv1.nftentitygetbyidreq"></a>
-
-```json
-{
-  "Id": 0
-}
-
-```
-
-### Properties
-
-|Name|Type|Required|Restrictions|Description|
-|---|---|---|---|---|
-|Id|number(int)|false|none|none|
 
 

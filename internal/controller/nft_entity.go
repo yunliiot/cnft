@@ -27,12 +27,12 @@ func (c *cNftEntity) Add(ctx context.Context, req *apiv1.NftEntityAddReq) (res *
 	return
 }
 
-func (c *cNftEntity) Update(ctx context.Context, req *apiv1.NftEntityUpdateReq) (res *apiv1.NftEntityUpdateRes, err error) {
-	in := &model.NftEntityUpdateInput{}
-	in.NftEntity = req.NftEntity
-	err = nft_entity.NftEntity().Update(ctx, in)
-	return
-}
+// func (c *cNftEntity) Update(ctx context.Context, req *apiv1.NftEntityUpdateReq) (res *apiv1.NftEntityUpdateRes, err error) {
+// 	in := &model.NftEntityUpdateInput{}
+// 	in.NftEntity = req.NftEntity
+// 	err = nft_entity.NftEntity().Update(ctx, in)
+// 	return
+// }
 
 func (c *cNftEntity) NftEntityList(ctx context.Context, req *apiv1.NftEntityListReq) (res apiv1.NftEntityListRes, err error) {
 	in := &model.NftEntityListInput{}
@@ -47,18 +47,18 @@ func (c *cNftEntity) NftEntityList(ctx context.Context, req *apiv1.NftEntityList
 	return res, err
 }
 
-func (c *cNftEntity) NftEntityGetById(ctx context.Context, req *apiv1.NftEntityGetByIdReq) (res *apiv1.NftEntityGetByIdRes, err error) {
-	info, err := nft_entity.NftEntity().GetById(ctx, req.Id)
-	if err != nil && err == sql.ErrNoRows {
-		return nil, nil
-	}
-	if err != nil {
-		return nil, err
-	}
-	res = &apiv1.NftEntityGetByIdRes{}
-	res.NftEntity = info.NftEntity
-	return
-}
+// func (c *cNftEntity) NftEntityGetById(ctx context.Context, req *apiv1.NftEntityGetByIdReq) (res *apiv1.NftEntityGetByIdRes, err error) {
+// 	info, err := nft_entity.NftEntity().GetById(ctx, req.Id)
+// 	if err != nil && err == sql.ErrNoRows {
+// 		return nil, nil
+// 	}
+// 	if err != nil {
+// 		return nil, err
+// 	}
+// 	res = &apiv1.NftEntityGetByIdRes{}
+// 	res.NftEntity = info.NftEntity
+// 	return
+// }
 
 func (c *cNftEntity) NftEntityGetByEntityId(ctx context.Context, req *apiv1.NftEntityGetByEntityIdReq) (res *apiv1.NftEntityGetByIdRes, err error) {
 	info, err := nft_entity.NftEntity().GetByEntityId(ctx, req.EntityId)
@@ -73,7 +73,7 @@ func (c *cNftEntity) NftEntityGetByEntityId(ctx context.Context, req *apiv1.NftE
 	return
 }
 
-func (c *cNftEntity) Delete(ctx context.Context, req *apiv1.NftEntityDeleteReq) (res apiv1.NftEntityDeleteRes, err error) {
-	err = nft_entity.NftEntity().Delete(ctx, req.Id)
-	return res, err
-}
+// func (c *cNftEntity) Delete(ctx context.Context, req *apiv1.NftEntityDeleteReq) (res apiv1.NftEntityDeleteRes, err error) {
+// 	err = nft_entity.NftEntity().Delete(ctx, req.Id)
+// 	return res, err
+// }
