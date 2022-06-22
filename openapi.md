@@ -1,4 +1,5 @@
-## 接口文档
+接口文档
+## 接口描述
 ---
 title: API v
 language_tabs:
@@ -13,13 +14,6 @@ headingLevel: 2
 
 ---
 
-<!-- Generator: Widdershins v4.0.1 -->
-
-<h1 id=""> v</h1>
-
-> Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
-
-<h1 id="-nft-entity">nft-entity</h1>
 
 ## post__nft-entity
 
