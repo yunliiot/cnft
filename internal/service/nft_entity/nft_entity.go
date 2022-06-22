@@ -25,6 +25,15 @@ func NftEntity() *sNftEntity {
 	return &insNftEntity
 }
 
+func (s *sNftEntity) CheckBeforeAdd(ctx context.Context, input *model.NftEntityAddInput) error {
+	input.Id = 0
+	ct, _ := dao.NftEntity.Ctx(ctx).Where(do.NftEntity{EntityId: input.EntityId}).Count()
+	if ct > 0 {
+		return errors.New("data already exists")
+	}
+	return nil
+}
+
 func (s *sNftEntity) Add(ctx context.Context, input *model.NftEntityAddInput) error {
 	input.Id = 0
 	ct, _ := dao.NftEntity.Ctx(ctx).Where(do.NftEntity{EntityId: input.EntityId}).Count()

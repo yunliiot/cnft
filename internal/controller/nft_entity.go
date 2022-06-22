@@ -20,6 +20,10 @@ func (c *cNftEntity) Add(ctx context.Context, req *apiv1.NftEntityAddReq) (res *
 	in := &model.NftEntityAddInput{}
 	in.EntityId = req.EntityId
 	in.EntityType = "1"
+	err = nft_entity.NftEntity().CheckBeforeAdd(ctx, in)
+	if err != nil {
+		return nil, err
+	}
 	in.Token = token.Token().Generate(ctx, in.EntityId)
 	in.CreatedAt = gtime.TimestampMilli()
 	in.UpdatedAt = in.CreatedAt
