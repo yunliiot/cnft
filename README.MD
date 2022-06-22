@@ -21,8 +21,8 @@ mysql -u root -p
 git clone git@github.com:33cn/chain33.git
 ## 编译前准备
 export GOPROXY=https://mirrors.aliyun.com/goproxy
-make
 cd chain33/cmd/chain3
+make
 go build
 ./chain33 -f chain33.toml
 ```
