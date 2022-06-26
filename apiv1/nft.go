@@ -43,7 +43,7 @@ type NftEntityGetByIdRes struct {
 }
 
 type NftEntityGetByEntityIdReq struct {
-	g.Meta   `path:"/nft-entity/entity/{entity_id}" tags:"nft-entity" dc:"根据entityId查询链上信息" method:"get" summary:""`
+	g.Meta   `path:"/nft-entity/query" tags:"nft-entity" dc:"根据entityId查询链上信息" method:"post" summary:""`
 	EntityId int `json:"entity_id"`
 }
 
